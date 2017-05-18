@@ -137,7 +137,7 @@ def register_user():
 		hometown=request.form.get('hometown')
 		gender=request.form.get('gender')
 	except:
-		print "couldn't find all tokens" #this prints to shell, end users will not see this (all print statements go to shell)
+		print("couldn't find all tokens") #this prints to shell, end users will not see this (all print statements go to shell)
 		return flask.redirect(flask.url_for('register'))
 	cursor = conn.cursor()
 	test =  isEmailUnique(email)
@@ -150,7 +150,7 @@ def register_user():
 		flask_login.login_user(user)
 		return render_template('hello.html', name=email, message='Account Created!')
 	else:
-		print "couldn't find all tokens"
+		print ("couldn't find all tokens")
 		return flask.redirect(flask.url_for('register'))
 
 def getUsersPhotos(uid):
@@ -200,7 +200,7 @@ def createAlbums():
 	try:
 		albums_name=request.form.get('AlbumName')
 	except:
-		print "couldn't find all tokens at line 186"
+		print ("couldn't find all tokens at line 186")
 		return flask.redirect(flask.url_for('createAlbums'))
 	date_of_creation = time.strftime("%Y-%m-%d")
 	albums_owner_id = getUserIdFromEmail(flask_login.current_user.id)
@@ -241,7 +241,7 @@ def searchFriends():
 		f_firstname=request.form.get('firstname')
 		f_lastname=request.form.get('lastname')
 	except:
-		print "couldn't find all tokens"
+		print ("couldn't find all tokens")
 		return flask.redirect(flask.url_for('friends'))
 	cursor = conn.cursor()
 	cursor.execute("SELECT email, firstname, lastname, gender FROM Users WHERE firstname = '{0}' AND lastname = '{1}'".format(f_firstname, f_lastname))
@@ -387,7 +387,7 @@ def upload_photo():
 		try:
 			AlbumName=request.form.get('album')
 		except:
-			print "couldn't find all tokens at line 186"
+			print ("couldn't find all tokens at line 186")
 			return flask.redirect(flask.url_for('upload'))
 		albums_id = findAlbumIdFromName(AlbumName)
 		albumn_user_id = findAlbumUserID(albums_id)
