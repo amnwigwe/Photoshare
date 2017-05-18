@@ -67,7 +67,7 @@ Given the type of photos uploaded by a user we'd like to make some recommendatio
 We want to assist users in selecting tags for their photos. To do that ask the user to enter a couple of tags that they already have in mind. Perform a query and ﬁnd all the photos, belonging to any user, that contain these tags. Report back the most frequent tags as recommendations.
 
 ## Installation
-To install all dependencies:
+To install all dependencies:    
 `python3 -m pip install --upgrade --no-cache-dir -r requirements.txt`
 
 To run the web service in the main directory:    
