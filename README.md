@@ -71,7 +71,7 @@ To install all dependencies:
 `python3 -m pip install --upgrade --no-cache-dir -r requirements.txt`
 
 To run the web service in the main directory:
-`export FLASK_APP=app.py`
+`export FLASK_APP=app.py`     
 `flask run`
 To Open in the browser:
 `http://localhost:5000/`
