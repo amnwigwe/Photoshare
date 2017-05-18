@@ -72,6 +72,6 @@ To install all dependencies:
 
 To run the web service in the main directory:
 `export FLASK_APP=app.py`     
-`flask run`
-To Open in the browser:
+`flask run`    
+To Open in the browser:    
 `http://localhost:5000/`
