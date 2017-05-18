@@ -70,7 +70,7 @@ We want to assist users in selecting tags for their photos. To do that ask the u
 To install all dependencies:
 `python3 -m pip install --upgrade --no-cache-dir -r requirements.txt`
 
-To run the web service in the main directory:
+To run the web service in the main directory:    
 `export FLASK_APP=app.py`     
 `flask run`    
 To Open in the browser:    
